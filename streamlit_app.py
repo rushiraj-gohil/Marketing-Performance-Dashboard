@@ -97,11 +97,14 @@ with tab1:
     avg_roas = filtered_df['ROAS'].mean()
     avg_engagement_rate = filtered_df['Engagement_Rate(%)'].mean()
 
-    # KPI ROW
-    col1, col2, col3, col4, col5, col6 = st.columns(6)
+    # KPI ROW - Row 1 (Focus on Reach/Impressions/CTR)
+    col1, col2, col3 = st.columns(3)
     col1.metric("Total Impressions", f"{total_impressions:,.0f}")
     col2.metric("Total Reach", f"{total_reach:,.0f}")
     col3.metric("Avg CTR (%)", f"{avg_ctr:.2f}")
+
+    # KPI ROW - Row 2 (Focus on Conversion/ROI/Engagement)
+    col4, col5, col6 = st.columns(3)
     col4.metric("Avg Conversion Rate (%)", f"{avg_conversion_rate:.2f}")
     col5.metric("Avg ROAS", f"{avg_roas:.2f}")
     col6.metric("Avg Engagement Rate (%)", f"{avg_engagement_rate:.2f}")
@@ -164,11 +167,14 @@ with tab2:
     # Calculate weighted average profit margin by total revenue if needed, but mean of percentage is fine for quick view
     avg_profit_margin = filtered_df['Profit_Margin'].mean()
 
-    # KPI ROW
-    col1, col2, col3, col4, col5, col6 = st.columns(6)
+    # KPI ROW - Row 1 (Focus on Totals/Profitability)
+    col1, col2, col3 = st.columns(3)
     col1.metric("Total Spend ($)", f"${total_spend:,.0f}")
     col2.metric("Total Revenue ($)", f"${total_revenue:,.0f}")
     col3.metric("Total Profit ($)", f"${total_profit:,.0f}")
+
+    # KPI ROW - Row 2 (Focus on Efficiency/Averages)
+    col4, col5, col6 = st.columns(3)
     col4.metric("Avg ROI (%)", f"{avg_roi:.2f}")
     col5.metric("Avg CAC ($)", f"${avg_cac:.2f}")
     col6.metric("Avg Profit Margin (%)", f"{avg_profit_margin * 100:.2f}")
