@@ -53,7 +53,7 @@ This project delivers a dual-perspective marketing performance dashboard designe
 
 ### Prerequisites
 - Python 3.8+
-- Libraries: `streamlit`, `pandas`, `numpy`
+- Libraries: `streamlit`, `pandas`, `numpy`, `plotly`, `random`, `datetime`
 
 ### Installation
 
