@@ -15,29 +15,60 @@ st.set_page_config(
 )
 
 # ===============================================================
-# CUSTOM CSS
+# CUSTOM CSS (updated: slightly smaller text sizes)
 # ===============================================================
 st.markdown("""
     <style>
+    /* Reduce overall app font size slightly */
+    html, body, .streamlit-container {
+        font-size: 14px; /* slightly smaller */
+    }
+
+    /* Headings slightly reduced */
+    h1, .stApp h1 {
+        font-size: 24px !important;
+    }
+    h2, .stApp h2 {
+        font-size: 20px !important;
+    }
+    h3, .stApp h3 {
+        font-size: 16px !important;
+    }
+
+    /* Markdown / paragraph body */
+    .stMarkdown, .stText, p {
+        font-size: 14px !important;
+        line-height: 1.35;
+    }
+
+    /* Metric / card adjustments */
     .metric-card {
         background-color: #f0f2f6;
-        padding: 20px;
+        padding: 14px;
         border-radius: 10px;
         border-left: 5px solid #1f77b4;
+        font-size: 14px;
     }
     .insight-box {
         background-color: #e8f4f8;
-        padding: 15px;
+        padding: 12px;
         border-radius: 8px;
         border-left: 4px solid #2196F3;
-        margin: 10px 0;
+        margin: 8px 0;
+        font-size: 14px;
     }
     .warning-box {
         background-color: #fff3cd;
-        padding: 15px;
+        padding: 12px;
         border-radius: 8px;
         border-left: 4px solid #ffc107;
-        margin: 10px 0;
+        margin: 8px 0;
+        font-size: 14px;
+    }
+
+    /* Sidebar and caption smaller */
+    .stSidebar, .stSidebar .block-container, .stCaption {
+        font-size: 12px !important;
     }
     </style>
 """, unsafe_allow_html=True)
@@ -893,15 +924,6 @@ st.markdown("""
 with st.sidebar:
     st.markdown("---")
     st.subheader("📥 Export Options")
-    
-    if st.button("Export Filtered Data"):
-        csv = filtered_df.to_csv(index=False)
-        st.download_button(
-            label="Download CSV",
-            data=csv,
-            file_name=f"marketing_data_{datetime.now().strftime('%Y%m%d')}.csv",
-            mime="text/csv"
-        )
     
     st.markdown("---")
     st.markdown("""
