@@ -75,7 +75,7 @@ tab1, tab2 = st.tabs(["🎯 CMO Dashboard", "💰 CFO Dashboard"])
 # TAB 1 — CMO DASHBOARD (Enhanced)
 # ===============================================================
 with tab1:
-    st.header("🎯 CMO Dashboard — Marketing Performance View (Enhanced)")
+    st.header("🎯 CMO Dashboard — Marketing Performance View")
     st.write("Focus: Reach, Engagement, and Conversion Efficiency")
 
     # Aggregate key metrics for KPI row
@@ -156,7 +156,7 @@ with tab1:
 # TAB 2 — CFO DASHBOARD (Enhanced)
 # ===============================================================
 with tab2:
-    st.header("💰 CFO Dashboard — Financial Efficiency View (Enhanced)")
+    st.header("💰 CFO Dashboard — Financial Efficiency View")
     st.write("Focus: Spend Optimization, Profitability, ROI, and Unit Economics")
 
     # Aggregate key metrics for KPI row
