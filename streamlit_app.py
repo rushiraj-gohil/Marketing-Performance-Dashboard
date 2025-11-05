@@ -920,22 +920,7 @@ st.markdown("""
 </div>
 """, unsafe_allow_html=True)
 
-# Export functionality
-with st.sidebar:
-    st.markdown("---")
-    st.subheader("📥 Export Options")
-    
-    st.markdown("---")
-    st.markdown("""
-    **Dashboard Features:**
-    - ✅ Executive Summary
-    - ✅ CMO Marketing View
-    - ✅ CFO Financial View
-    - ✅ Multi-dimensional Filtering
-    - ✅ Real-time Calculations
-    - ✅ Period Comparisons
-    - ✅ Advanced Analytics
-    """)
+
     
     st.markdown("---")
     st.caption(f"Last updated: {datetime.now().strftime('%Y-%m-%d %H:%M')}")
