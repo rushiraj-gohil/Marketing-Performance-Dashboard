@@ -329,7 +329,8 @@ with tab_exec:
     
 
 # ===============================================================
-# KEY INSIGHTS (100% Dark/Light Mode Compatible)
+# ===============================================================
+# KEY INSIGHTS (Plain Text, Works in Both Light & Dark Mode)
 # ===============================================================
 st.subheader("💡 Key Insights")
 
@@ -340,41 +341,16 @@ best_roas = platform_metrics.loc[best_platform, 'ROAS']
 worst_platform = platform_metrics.sort_values('Profit($)', ascending=True).index[0]
 worst_profit = platform_metrics.loc[worst_platform, 'Profit($)']
 
-# Best-performing box (deep blue, white text)
 st.markdown(f"""
-<div style="
-    background-color:#1565c0 !important;
-    color:#ffffff !important;
-    padding:14px 18px;
-    border-radius:10px;
-    border-left:5px solid #0d47a1;
-    margin:10px 0;
-    font-size:15px;
-    font-weight:500;
-">
-✅ <strong>Best Performing Platform:</strong> 
-{best_platform} generated <strong>${best_profit:,.0f}</strong> in profit 
-with a ROAS of <strong>{best_roas:.2f}x</strong>.
-</div>
-""", unsafe_allow_html=True)
+**✅ Best Performing Platform:** {best_platform} generated **${best_profit:,.0f}** in profit 
+with a ROAS of **{best_roas:.2f}x**.
+""")
 
-# Underperforming box (amber, dark text)
 st.markdown(f"""
-<div style="
-    background-color:#ffca28 !important;
-    color:#1a1a1a !important;
-    padding:14px 18px;
-    border-radius:10px;
-    border-left:5px solid #f57f17;
-    margin:10px 0;
-    font-size:15px;
-    font-weight:500;
-">
-⚠️ <strong>Attention Required:</strong> 
-{worst_platform} generated only <strong>${worst_profit:,.0f}</strong> in profit. 
+**⚠️ Attention Required:** {worst_platform} generated only **${worst_profit:,.0f}** in profit. 
 Consider budget reallocation or campaign optimization.
-</div>
-""", unsafe_allow_html=True)
+""")
+
 
 
 # ===============================================================
