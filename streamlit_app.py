@@ -50,21 +50,24 @@ st.markdown("""
         font-size: 14px;
     }
     .insight-box {
-        background-color: #e8f4f8;
-        padding: 12px;
-        border-radius: 8px;
-        border-left: 4px solid #2196F3;
-        margin: 8px 0;
-        font-size: 14px;
-    }
-    .warning-box {
-        background-color: #fff3cd;
-        padding: 12px;
-        border-radius: 8px;
-        border-left: 4px solid #ffc107;
-        margin: 8px 0;
-        font-size: 14px;
-    }
+    background-color: #2a3b47; /* balanced tone */
+    color: #eaf4fa; /* readable on both */
+    padding: 12px;
+    border-radius: 8px;
+    border-left: 4px solid #4fc3f7;
+    margin: 8px 0;
+    font-size: 14px;
+}
+
+.warning-box {
+    background-color: #3b2f13;
+    color: #fff8e1;
+    padding: 12px;
+    border-radius: 8px;
+    border-left: 4px solid #ffca28;
+    margin: 8px 0;
+    font-size: 14px;
+}
 
     /* Sidebar and caption smaller */
     .stSidebar, .stSidebar .block-container, .stCaption {
